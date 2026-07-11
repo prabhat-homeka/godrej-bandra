@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const STATS = [
   { icon: "/img/amenities-icon/area.png", value: "129+", label: "Years legacy of quality & trust" },
@@ -13,22 +14,26 @@ export default function AboutDeveloper() {
   return (
     <section id="about-developer" className="bg-cream-light py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="font-serif text-3xl text-ink sm:text-4xl">
-          About Godrej Properties
-        </h2>
+        <Reveal>
+          <h2 className="font-serif text-3xl text-ink sm:text-4xl">
+            About Godrej Properties
+          </h2>
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="flex justify-center rounded-[20px] bg-white px-12 py-10 shadow-[0_0_14px_-5px_var(--color-gold)]">
-            <Image
-              src="/img/brandlogoabout.png"
-              alt="Godrej Properties"
-              width={320}
-              height={180}
-              className="h-auto w-full max-w-xs object-contain"
-            />
-          </div>
+          <Reveal>
+            <div className="hover-lift flex justify-center rounded-[20px] bg-white px-12 py-10 shadow-[0_0_14px_-5px_var(--color-gold)]">
+              <Image
+                src="/img/brandlogoabout.png"
+                alt="Godrej Properties"
+                width={320}
+                height={180}
+                className="h-auto w-full max-w-xs object-contain"
+              />
+            </div>
+          </Reveal>
 
-          <div>
+          <Reveal style={{ transitionDelay: "150ms" }}>
             <p className="leading-relaxed text-taupe">
               Godrej Properties, part of the 120+ year-old Group, is one of India&apos;s
               leading real estate developers, known for blending trust, innovation, and
@@ -51,21 +56,20 @@ export default function AboutDeveloper() {
                 </span>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
 
         <div className="mt-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
-          {STATS.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-xl bg-white p-5 text-center shadow-[0_0_14px_-5px_var(--color-gold)]"
-            >
-              <span className="mx-auto flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#f4f1e8]">
-                <Image src={stat.icon} alt="" width={30} height={30} />
-              </span>
-              <p className="mt-2 font-serif text-4xl text-ink">{stat.value}</p>
-              <p className="mt-1 text-sm text-taupe">{stat.label}</p>
-            </div>
+          {STATS.map((stat, i) => (
+            <Reveal key={stat.label} style={{ transitionDelay: `${i * 80}ms` }}>
+              <div className="hover-lift rounded-xl bg-white p-5 text-center shadow-[0_0_14px_-5px_var(--color-gold)]">
+                <span className="mx-auto flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#f4f1e8]">
+                  <Image src={stat.icon} alt="" width={30} height={30} />
+                </span>
+                <p className="mt-2 font-serif text-4xl text-ink">{stat.value}</p>
+                <p className="mt-1 text-sm text-taupe">{stat.label}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

@@ -161,7 +161,7 @@ export default function EnquiryModal() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full rounded-xl bg-gold py-3 text-sm font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark disabled:opacity-60"
+              className="gold-shine w-full rounded-xl bg-gold py-3 text-sm font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : "Send My Enquiry"}
             </button>

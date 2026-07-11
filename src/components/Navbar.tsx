@@ -59,7 +59,7 @@ export default function Navbar() {
           </button>
           <button
             onClick={() => openEnquiry("Navbar")}
-            className="whitespace-nowrap rounded-xl bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark"
+            className="gold-shine whitespace-nowrap rounded-xl bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark"
           >
             Enquire Now
           </button>
@@ -104,7 +104,7 @@ export default function Navbar() {
                 setOpen(false);
                 openEnquiry("Mobile Navbar");
               }}
-              className="rounded-xl bg-gold py-2 text-xs font-semibold uppercase tracking-wide text-ink"
+              className="gold-shine rounded-xl bg-gold py-2 text-xs font-semibold uppercase tracking-wide text-ink"
             >
               Enquire Now
             </button>

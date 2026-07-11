@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEnquiry } from "./EnquiryContext";
+import Reveal from "./Reveal";
 
 const STATS = [
   { value: "4.25", label: "Acres" },
@@ -15,7 +16,7 @@ export default function AboutProject() {
   return (
     <section id="about-project" className="bg-cream-light py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
-        <div className="relative h-96 w-full overflow-hidden lg:h-[520px]">
+        <Reveal className="relative h-96 w-full overflow-hidden lg:h-[520px]">
           <Image
             src="/img/aboutproject-1.webp"
             alt="Godrej Bandra West project"
@@ -23,9 +24,9 @@ export default function AboutProject() {
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
           />
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal style={{ transitionDelay: "150ms" }}>
           <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
             About
           </p>
@@ -65,7 +66,7 @@ export default function AboutProject() {
               Click to view Brochure
             </button>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

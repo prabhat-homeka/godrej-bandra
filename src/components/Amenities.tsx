@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 const AMENITIES = [
   { name: "Infinity Pool", icon: "/img/amenities-icon/swimming.png" },
@@ -14,7 +15,7 @@ export default function Amenities() {
   return (
     <section id="amenities" className="bg-cream py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl">
+        <Reveal className="max-w-2xl">
           <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
             World-Class
           </p>
@@ -22,17 +23,16 @@ export default function Amenities() {
           <p className="mt-3 text-taupe">
             Experience a lifestyle of comfort and convenience at the Sky Lounge.
           </p>
-        </div>
+        </Reveal>
 
         <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-7">
-          {AMENITIES.map((a) => (
-            <div
-              key={a.name}
-              className="flex flex-col items-center gap-3 border border-ink/10 bg-white px-4 py-8 text-center transition hover:border-gold"
-            >
-              <Image src={a.icon} alt="" width={40} height={40} />
-              <p className="text-sm font-medium text-ink">{a.name}</p>
-            </div>
+          {AMENITIES.map((a, i) => (
+            <Reveal key={a.name} style={{ transitionDelay: `${i * 60}ms` }}>
+              <div className="hover-lift flex flex-col items-center gap-3 border border-ink/10 bg-white px-4 py-8 text-center transition hover:border-gold">
+                <Image src={a.icon} alt="" width={40} height={40} />
+                <p className="text-sm font-medium text-ink">{a.name}</p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

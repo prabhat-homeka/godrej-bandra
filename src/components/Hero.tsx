@@ -55,7 +55,7 @@ export default function Hero() {
             href="https://api.whatsapp.com/send?phone=+917000106787&text=Hello%2C%20I%20am%20Interested%20in%20Godrej%27s%20New%20Launch%20Project%20at%20Bandra.%20Kindly%20Send%20the%20Project%20Details."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-gold-dark"
+            className="gold-shine flex items-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-gold-dark"
           >
             Connect on WhatsApp
           </a>

@@ -34,3 +34,43 @@ html {
 .section-eyebrow {
   letter-spacing: 0.3em;
 }
+
+.gold-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  animation: gold-shine-sweep 3s infinite linear;
+}
+
+@keyframes gold-shine-sweep {
+  0% {
+    left: -100%;
+  }
+  30% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.hover-lift {
+  transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px -5px var(--color-gold);
+}

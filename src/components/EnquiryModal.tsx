@@ -138,8 +138,16 @@ export default function EnquiryModal() {
             <label className="flex items-start gap-2 text-xs text-taupe">
               <input type="checkbox" required className="mt-0.5" />
               <span>
-                I agree to the Privacy Policy and consent to be contacted about this
-                project.
+                I agree to the{" "}
+                <a
+                  href="https://www.homeka.in/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-gold-dark"
+                >
+                  Privacy Policy
+                </a>{" "}
+                and consent to be contacted about this project.
               </span>
             </label>
 
@@ -158,7 +166,7 @@ export default function EnquiryModal() {
             </button>
 
             <a
-              href="https://wa.me/919987546331"
+              href="https://wa.me/917000106787"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center text-sm font-medium text-gold-dark underline underline-offset-4"

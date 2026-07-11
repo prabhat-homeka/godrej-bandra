@@ -46,10 +46,10 @@ export default function Navbar() {
 
         <div className="hidden shrink-0 items-center gap-3 xl:flex">
           <a
-            href="tel:+919987546331"
+            href="tel:+917000106787"
             className="hidden whitespace-nowrap text-sm font-semibold text-ink/80 hover:text-gold-dark 2xl:inline"
           >
-            +91 9987546331
+            +91 7000106787
           </a>
           <button
             onClick={() => openEnquiry("Navbar - Brochure")}
@@ -87,8 +87,8 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a href="tel:+919987546331" className="text-sm font-semibold text-ink">
-              +91 9987546331
+            <a href="tel:+917000106787" className="text-sm font-semibold text-ink">
+              +91 7000106787
             </a>
             <button
               onClick={() => {

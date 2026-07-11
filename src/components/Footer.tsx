@@ -28,8 +28,8 @@ export default function Footer() {
             </p>
             <p className="mt-2 text-sm">
               Call us on{" "}
-              <a href="tel:+919987546331" className="text-gold hover:underline">
-                +91 9987546331
+              <a href="tel:+917000106787" className="text-gold hover:underline">
+                +91 7000106787
               </a>
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
               Contact
             </p>
             <a
-              href="https://wa.me/919987546331"
+              href="https://wa.me/917000106787"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm hover:text-gold"
@@ -69,8 +69,8 @@ export default function Footer() {
           Disclaimer: The information provided on this website is intended exclusively
           for informational purposes and should not be construed as an offer of
           services. This site is managed by a RERA authorized affiliate partner / real
-          estate agent (for multiple real estate developers) namely Rioga Premium Real
-          Estate Advisory LLP registered under MahaRERA ID number A51800000974. The
+          estate agent (for multiple real estate developers) namely Homeka Club Private
+          Limited registered under MahaRERA ID number A041172502869. The
           pricing information presented on this website is subject to alteration
           without advance notification, and the assurance of property availability
           cannot be guaranteed. The images showcased on this website are for
@@ -88,9 +88,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 flex flex-col items-start justify-between gap-2 border-t border-cream-light/10 pt-6 text-xs text-cream-light/40 sm:flex-row sm:items-center">
-          <p>Copyright © {new Date().getFullYear()} Rioga Premium Real Estate Advisory LLP.</p>
+          <p>Copyright © {new Date().getFullYear()} Homeka Club Private Limited.</p>
           <a
-            href="https://riogapremium.in/privacy_policy.html"
+            href="https://www.homeka.in/privacy"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gold"

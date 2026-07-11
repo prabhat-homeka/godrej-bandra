@@ -1,10 +1,4 @@
-const PARTNERS = [
-  { role: "Architectural Consultant", name: "Mandviwala Qutub & Associates" },
-  { role: "Interior Consultant", name: "To be announced" },
-  { role: "Landscape Consultant", name: "To be announced" },
-  { role: "Facade Consultant", name: "To be announced" },
-  { role: "Facade Lighting Consultant", name: "To be announced" },
-];
+import Image from "next/image";
 
 export default function DesignPartners() {
   return (
@@ -15,18 +9,17 @@ export default function DesignPartners() {
             Design
           </p>
           <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">Partners</h2>
-          <p className="mt-3 text-taupe">Our design partners.</p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden border border-ink/10 bg-ink/10 sm:grid-cols-2 lg:grid-cols-5">
-          {PARTNERS.map((partner) => (
-            <div key={partner.role} className="bg-white p-6">
-              <p className="text-xs font-semibold uppercase tracking-wide text-gold-dark">
-                {partner.role}
-              </p>
-              <p className="mt-2 font-serif text-lg text-ink">{partner.name}</p>
-            </div>
-          ))}
+        <div className="mt-12 flex flex-col items-center justify-between gap-6 rounded-xl bg-white p-8 shadow-[0_0_14px_-8px_var(--color-gold)] sm:flex-row">
+          <p className="font-serif text-xl text-ink">Mandviwala Qutub &amp; Associates</p>
+          <Image
+            src="/img/design/dp1.webp"
+            alt="Mandviwala Qutub & Associates"
+            width={160}
+            height={80}
+            className="h-14 w-auto object-contain"
+          />
         </div>
       </div>
     </section>

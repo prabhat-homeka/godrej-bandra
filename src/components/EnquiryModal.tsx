@@ -37,7 +37,7 @@ export default function EnquiryModal() {
       onClick={closeEnquiry}
     >
       <div
-        className="relative w-full max-w-md rounded-sm bg-cream-light p-8 shadow-2xl"
+        className="relative w-full max-w-md rounded-xl bg-cream-light p-8 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -152,7 +152,7 @@ export default function EnquiryModal() {
             <button
               type="submit"
               disabled={status === "submitting"}
-              className="w-full bg-gold py-3 text-sm font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark disabled:opacity-60"
+              className="w-full rounded-xl bg-gold py-3 text-sm font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark disabled:opacity-60"
             >
               {status === "submitting" ? "Sending..." : "Send My Enquiry"}
             </button>

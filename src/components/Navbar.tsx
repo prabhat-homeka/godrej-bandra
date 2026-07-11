@@ -19,7 +19,7 @@ export default function Navbar() {
   const { openEnquiry } = useEnquiry();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink/10 bg-cream-light/95 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-cream-light/95 shadow-[0_0_14px_-5px_var(--color-gold)] backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <a href="#home" className="flex items-center gap-2">
           <Image
@@ -53,13 +53,13 @@ export default function Navbar() {
           </a>
           <button
             onClick={() => openEnquiry("Navbar - Brochure")}
-            className="border border-ink/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:border-gold hover:text-gold-dark"
+            className="rounded-xl border border-ink/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:border-gold hover:text-gold-dark"
           >
             Download Brochure
           </button>
           <button
             onClick={() => openEnquiry("Navbar")}
-            className="bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark"
+            className="rounded-xl bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark"
           >
             Enquire Now
           </button>
@@ -95,7 +95,7 @@ export default function Navbar() {
                 setOpen(false);
                 openEnquiry("Mobile Navbar");
               }}
-              className="mt-2 bg-gold py-2 text-xs font-semibold uppercase tracking-wide text-ink"
+              className="mt-2 rounded-xl bg-gold py-2 text-xs font-semibold uppercase tracking-wide text-ink"
             >
               Enquire Now
             </button>

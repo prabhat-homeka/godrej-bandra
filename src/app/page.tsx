@@ -4,7 +4,6 @@ import Highlights from "@/components/Highlights";
 import PlansPricing from "@/components/PlansPricing";
 import AboutProject from "@/components/AboutProject";
 import DesignPartners from "@/components/DesignPartners";
-import VideoGallery from "@/components/VideoGallery";
 import Gallery from "@/components/Gallery";
 import Amenities from "@/components/Amenities";
 import Connectivity from "@/components/Connectivity";
@@ -21,7 +20,6 @@ export default function Home() {
         <PlansPricing />
         <AboutProject />
         <DesignPartners />
-        <VideoGallery />
         <Gallery />
         <Amenities />
         <Connectivity />

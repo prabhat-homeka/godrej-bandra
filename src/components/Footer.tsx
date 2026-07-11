@@ -89,7 +89,12 @@ export default function Footer() {
 
         <div className="mt-6 flex flex-col items-start justify-between gap-2 border-t border-cream-light/10 pt-6 text-xs text-cream-light/40 sm:flex-row sm:items-center">
           <p>Copyright © {new Date().getFullYear()} Rioga Premium Real Estate Advisory LLP.</p>
-          <a href="/privacy-policy" className="hover:text-gold">
+          <a
+            href="https://riogapremium.in/privacy_policy.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-gold"
+          >
             Privacy Policy And Terms And Conditions
           </a>
         </div>

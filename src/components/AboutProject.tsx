@@ -60,7 +60,7 @@ export default function AboutProject() {
             </div>
             <button
               onClick={() => openEnquiry("About Project - Brochure")}
-              className="border border-gold px-6 py-3 text-xs font-semibold uppercase tracking-wide text-gold-dark transition hover:bg-gold hover:text-ink"
+              className="rounded-xl border border-gold px-6 py-3 text-xs font-semibold uppercase tracking-wide text-gold-dark transition hover:bg-gold hover:text-ink"
             >
               Click to view Brochure
             </button>

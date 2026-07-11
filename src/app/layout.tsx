@@ -4,6 +4,7 @@ import "./globals.css";
 import { EnquiryProvider } from "@/components/EnquiryContext";
 import EnquiryModal from "@/components/EnquiryModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TrackingCapture from "@/components/TrackingCapture";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -39,6 +40,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-cream-light text-ink">
         <EnquiryProvider>
+          <TrackingCapture />
           {children}
           <EnquiryModal />
           <WhatsAppButton />

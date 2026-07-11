@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useEnquiry } from "./EnquiryContext";
+import { getTrackingParams } from "@/lib/tracking";
 
 const CONFIG_OPTIONS = ["3 BHK", "4 BHK", "3 BHK Royal", "Not sure yet"];
 
@@ -21,7 +22,7 @@ export default function EnquiryModal() {
       const res = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, source }),
+        body: JSON.stringify({ ...data, source, ...getTrackingParams() }),
       });
       if (!res.ok) throw new Error("failed");
       setStatus("success");

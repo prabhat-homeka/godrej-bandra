@@ -30,14 +30,18 @@ export async function POST(req: NextRequest) {
     placement,
     gclid,
     url,
+    adset_id,
+    adset_name,
+    source, // Google Ads campaign source
+    sub_source, // Google Ads sub-source (e.g., Demand Gen)
   } = body;
 
   const leadPayload = {
     full_name: name,
     phone,
     email: email || undefined,
-    source: "Google",
-    sub_source: "Demand Gen",
+    source: source || "Google",
+    sub_source: sub_source || "Demand Gen",
     project_id: CRM_PROJECT_ID || undefined,
     subproject_id: CRM_SUBPROJECT_ID || undefined,
     // Top-level Google/UTM fields — the CRM lifts these into custom_fields itself.
@@ -58,6 +62,8 @@ export async function POST(req: NextRequest) {
       configuration,
       preferred_date: preferredDate,
       preferred_time: preferredTime,
+      google_ads_adset_id: adset_id,
+      google_ads_adset_name: adset_name,
     },
   };
 

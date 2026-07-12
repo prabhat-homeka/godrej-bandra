@@ -1,4 +1,5 @@
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const HIGHLIGHTS = [
   { title: "Iconic", desc: "Premium Hi-Rise Development" },
@@ -13,15 +14,11 @@ export default function Highlights() {
   return (
     <section id="highlights" className="bg-cream-light py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-            Project
-          </p>
-          <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">Highlights</h2>
-          <p className="mt-3 text-taupe">
-            Experience luxury living with exceptional features designed for your comfort.
-          </p>
-        </Reveal>
+        <SectionHeading
+          black="Project"
+          gold="Highlights"
+          subtitle="Experience luxury living with exceptional features designed for your comfort."
+        />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {HIGHLIGHTS.map((item, i) => (

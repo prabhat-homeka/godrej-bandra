@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const STATS = [
   { icon: "/img/amenities-icon/area.png", value: "129+", label: "Years legacy of quality & trust" },
@@ -14,11 +15,7 @@ export default function AboutDeveloper() {
   return (
     <section id="about-developer" className="bg-cream-light py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal>
-          <h2 className="font-serif text-3xl text-ink sm:text-4xl">
-            About Godrej Properties
-          </h2>
-        </Reveal>
+        <SectionHeading black="About Godrej Properties" />
 
         <div className="mt-12 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal>

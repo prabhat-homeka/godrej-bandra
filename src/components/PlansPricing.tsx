@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEnquiry } from "./EnquiryContext";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 type Plan = {
   type: string;
@@ -35,13 +36,11 @@ export default function PlansPricing() {
   return (
     <section id="plans" className="bg-cream py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-            Plans &amp;
-          </p>
-          <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">Pricing</h2>
-          <p className="mt-3 text-taupe">Choose from our designed floor plans.</p>
-        </Reveal>
+        <SectionHeading
+          black="Plans &"
+          gold="Pricing"
+          subtitle="Choose from our designed floor plans."
+        />
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {PLANS.map((plan, i) => (

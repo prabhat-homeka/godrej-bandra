@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const AMENITIES = [
   { name: "Infinity Pool", icon: "/img/amenities-icon/swimming.png" },
@@ -15,15 +16,11 @@ export default function Amenities() {
   return (
     <section id="amenities" className="bg-cream py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-            World-Class
-          </p>
-          <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">Amenities</h2>
-          <p className="mt-3 text-taupe">
-            Experience a lifestyle of comfort and convenience at the Sky Lounge.
-          </p>
-        </Reveal>
+        <SectionHeading
+          black="World-Class"
+          gold="Amenities"
+          subtitle="Experience a lifestyle of comfort and convenience."
+        />
 
         <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-7">
           {AMENITIES.map((a, i) => (

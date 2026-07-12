@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const CATEGORIES = [
   {
@@ -52,14 +53,7 @@ export default function Connectivity() {
   return (
     <section id="connectivity" className="bg-cream-light py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-            Connectivity
-          </p>
-          <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">
-            Seamless to major landmarks
-          </h2>
-        </Reveal>
+        <SectionHeading gold="Connectivity" subtitle="Seamless to major landmarks" />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {CATEGORIES.map((cat, i) => (

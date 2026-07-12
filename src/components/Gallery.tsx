@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const GALLERY_IMAGES = [
   "/img/gallery/gal01.webp",
@@ -15,14 +16,10 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-cream-light py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="max-w-2xl">
-          <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-            Gallery
-          </p>
-          <h2 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">
-            Explore the beauty and elegance of Godrej Bandra
-          </h2>
-        </Reveal>
+        <SectionHeading
+          gold="Gallery"
+          subtitle="Explore the beauty and elegance of Godrej Bandra"
+        />
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {GALLERY_IMAGES.map((src, i) => (

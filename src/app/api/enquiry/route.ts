@@ -34,13 +34,14 @@ export async function POST(req: NextRequest) {
     adset_name,
     source, // Google Ads campaign source
     sub_source, // Google Ads sub-source (e.g., Demand Gen)
+    pincode,
   } = body;
 
   const leadPayload = {
     full_name: name,
     phone,
     email: email || undefined,
-    source: source || "Google",
+    source: "Google",
     sub_source: sub_source || "Demand Gen",
     project_id: CRM_PROJECT_ID || undefined,
     subproject_id: CRM_SUBPROJECT_ID || undefined,
@@ -64,6 +65,8 @@ export async function POST(req: NextRequest) {
       preferred_time: preferredTime,
       google_ads_adset_id: adset_id,
       google_ads_adset_name: adset_name,
+      form: formType,
+      pincode,
     },
   };
 

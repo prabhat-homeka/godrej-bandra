@@ -201,21 +201,37 @@ export default function EnquiryModal() {
                 placeholder="you@example.com"
               />
             </div>
-            <div>
-              <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-taupe">
-                Configuration
-              </label>
-              <select
-                name="configuration"
-                className="w-full border border-ink/15 bg-white px-3 py-2 text-sm outline-none focus:border-gold"
-                defaultValue={CONFIG_OPTIONS[0]}
-              >
-                {CONFIG_OPTIONS.map((opt) => (
-                  <option key={opt} value={opt}>
-                    {opt}
-                  </option>
-                ))}
-              </select>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-taupe">
+                  Configuration
+                </label>
+                <select
+                  name="configuration"
+                  className="w-full border border-ink/15 bg-white px-3 py-2 text-sm outline-none focus:border-gold"
+                  defaultValue={CONFIG_OPTIONS[0]}
+                >
+                  {CONFIG_OPTIONS.map((opt) => (
+                    <option key={opt} value={opt}>
+                      {opt}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="mb-1 block text-xs font-medium uppercase tracking-wide text-taupe">
+                  Pincode
+                </label>
+                <input
+                  name="pincode"
+                  type="text"
+                  inputMode="numeric"
+                  maxLength={6}
+                  pattern="[0-9]{6}"
+                  className="w-full border border-ink/15 bg-white px-3 py-2 text-sm outline-none focus:border-gold"
+                  placeholder="400050"
+                />
+              </div>
             </div>
 
             {config.showSchedule && (

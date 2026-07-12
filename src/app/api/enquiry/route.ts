@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
     full_name: name,
     phone,
     email: email || undefined,
-    source: source || "Google",
+    source: "Google",
     sub_source: sub_source || "Demand Gen",
     project_id: CRM_PROJECT_ID || undefined,
     subproject_id: CRM_SUBPROJECT_ID || undefined,

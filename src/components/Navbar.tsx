@@ -52,13 +52,13 @@ export default function Navbar() {
             +91 7000106787
           </a>
           <button
-            onClick={() => openEnquiry("Navbar - Brochure")}
+            onClick={() => openEnquiry("Download Brochure", "Navbar")}
             className="hidden whitespace-nowrap rounded-xl border border-ink/20 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:border-gold hover:text-gold-dark 2xl:inline-block"
           >
             Download Brochure
           </button>
           <button
-            onClick={() => openEnquiry("Navbar")}
+            onClick={() => openEnquiry("Enquire Now", "Navbar")}
             className="gold-shine whitespace-nowrap rounded-xl bg-gold px-4 py-2 text-xs font-semibold uppercase tracking-wide text-ink transition hover:bg-gold-dark"
           >
             Enquire Now
@@ -93,7 +93,7 @@ export default function Navbar() {
             <button
               onClick={() => {
                 setOpen(false);
-                openEnquiry("Navbar - Brochure");
+                openEnquiry("Download Brochure", "Mobile Navbar");
               }}
               className="mt-2 rounded-xl border border-ink/20 py-2 text-xs font-semibold uppercase tracking-wide text-ink"
             >
@@ -102,7 +102,7 @@ export default function Navbar() {
             <button
               onClick={() => {
                 setOpen(false);
-                openEnquiry("Mobile Navbar");
+                openEnquiry("Enquire Now", "Mobile Navbar");
               }}
               className="gold-shine rounded-xl bg-gold py-2 text-xs font-semibold uppercase tracking-wide text-ink"
             >

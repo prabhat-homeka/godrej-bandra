@@ -64,7 +64,7 @@ export default function AboutProject() {
                 <p className="font-serif text-2xl text-ink">₹ On Request</p>
               </div>
               <button
-                onClick={() => openEnquiry("About Project - Brochure")}
+                onClick={() => openEnquiry("Download Brochure", "About Project")}
                 className="rounded-xl border border-gold px-6 py-3 text-xs font-semibold uppercase tracking-wide text-gold-dark transition hover:bg-gold hover:text-ink"
               >
                 Click to view Brochure

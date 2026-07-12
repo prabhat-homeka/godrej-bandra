@@ -18,6 +18,7 @@ export async function POST(req: NextRequest) {
     configuration,
     preferredDate,
     preferredTime,
+    formType, // which popup variant was shown (Enquire Now, Request a Callback, View Floor Plan, etc.)
     source: formSource, // which CTA on the site opened the modal (Hero, Navbar, Plans - 3 BHK, etc.)
     utm_source,
     utm_medium,
@@ -52,6 +53,7 @@ export async function POST(req: NextRequest) {
     url,
     custom_fields: {
       website: "godrej-bandra.com",
+      form_type: formType,
       form_source: formSource,
       configuration,
       preferred_date: preferredDate,

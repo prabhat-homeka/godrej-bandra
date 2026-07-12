@@ -47,7 +47,7 @@ export default function PlansPricing() {
             <Reveal key={plan.type} style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="hover-lift overflow-hidden rounded-xl bg-white shadow-[0_0_14px_-8px_var(--color-gold)]">
                 <button
-                  onClick={() => openEnquiry(`Floor Plan - ${plan.type}`)}
+                  onClick={() => openEnquiry("View Floor Plan", `Plans - ${plan.type}`)}
                   className="group relative block h-64 w-full bg-cream text-left"
                 >
                   <Image
@@ -76,7 +76,7 @@ export default function PlansPricing() {
                   <p className="mt-2 text-center text-xs italic text-taupe">{plan.blurb}</p>
 
                   <button
-                    onClick={() => openEnquiry(`Plans - ${plan.type}`)}
+                    onClick={() => openEnquiry("Check Price", `Plans - ${plan.type}`)}
                     className="gold-shine mt-4 w-full rounded-xl bg-gold py-2.5 text-sm font-semibold text-ink transition hover:bg-gold-dark"
                   >
                     Starting ₹ Get Pricing
@@ -88,7 +88,7 @@ export default function PlansPricing() {
         </div>
 
         <button
-          onClick={() => openEnquiry("Plans & Pricing")}
+          onClick={() => openEnquiry("Request a Callback", "Plans & Pricing")}
           className="mx-auto mt-12 block rounded-xl border border-gold px-8 py-3 text-sm font-semibold uppercase tracking-wide text-gold-dark transition hover:bg-gold hover:text-ink"
         >
           Request a Callback

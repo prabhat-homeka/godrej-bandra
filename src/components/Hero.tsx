@@ -60,7 +60,7 @@ export default function Hero() {
             Connect on WhatsApp
           </a>
           <button
-            onClick={() => openEnquiry("Hero")}
+            onClick={() => openEnquiry("Enquire Now", "Hero")}
             className="rounded-xl border border-cream-light/50 px-6 py-3 text-sm font-semibold text-cream-light transition hover:border-gold hover:text-gold"
           >
             Enquire Now

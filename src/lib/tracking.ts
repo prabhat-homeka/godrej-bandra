@@ -13,10 +13,18 @@ const URL_PARAM_KEYS = [
   "placement",
 ] as const;
 
-export type TrackingParams = Partial<Record<(typeof URL_PARAM_KEYS)[number], string>> & {
-  gclid?: string;
-  url?: string;
-};
+const GOOGLE_ADS_PARAM_KEYS = [
+  "adset_id",
+  "adset_name",
+  "source",
+  "sub_source",
+] as const;
+
+export type TrackingParams = Partial<Record<(typeof URL_PARAM_KEYS)[number], string>> &
+  Partial<Record<(typeof GOOGLE_ADS_PARAM_KEYS)[number], string>> & {
+    gclid?: string;
+    url?: string;
+  };
 
 // Reads Google Ads / UTM tracking params off the landing URL and persists them
 // for the rest of the session, so they survive the visitor browsing to other
@@ -31,6 +39,12 @@ export function captureTrackingParams(): void {
     const value = params.get(key);
     if (value) captured[key] = value;
   }
+
+  for (const key of GOOGLE_ADS_PARAM_KEYS) {
+    const value = params.get(key);
+    if (value) captured[key] = value;
+  }
+
   const gclid = params.get("gclid");
   if (gclid) captured.gclid = gclid;
 

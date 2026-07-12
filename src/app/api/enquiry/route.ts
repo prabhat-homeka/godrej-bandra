@@ -67,21 +67,33 @@ export async function POST(req: NextRequest) {
     },
   };
 
-  try {
-    const res = await fetch(`${CRM_API_URL}/api/leads`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(leadPayload),
-    });
+  const crmBody = JSON.stringify(leadPayload);
+  let lastErrText = "";
 
-    if (!res.ok) {
-      const errText = await res.text().catch(() => "");
-      console.error("CRM lead push failed:", res.status, errText);
-      return NextResponse.json({ ok: false, error: "Could not reach CRM" }, { status: 502 });
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch(`${CRM_API_URL}/api/leads`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: crmBody,
+      });
+
+      if (res.ok) break;
+
+      lastErrText = await res.text().catch(() => "");
+      console.error(`CRM lead push failed (attempt ${attempt}):`, res.status, lastErrText);
+
+      // Only retry on 500 (e.g. duplicate display_id race condition); don't retry 4xx
+      if (res.status < 500 || attempt === 3) {
+        return NextResponse.json({ ok: false, error: "Could not reach CRM" }, { status: 502 });
+      }
+    } catch (err) {
+      lastErrText = String(err);
+      console.error(`CRM lead push error (attempt ${attempt}):`, err);
+      if (attempt === 3) {
+        return NextResponse.json({ ok: false, error: "Could not reach CRM" }, { status: 502 });
+      }
     }
-  } catch (err) {
-    console.error("CRM lead push error:", err);
-    return NextResponse.json({ ok: false, error: "Could not reach CRM" }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

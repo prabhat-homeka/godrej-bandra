@@ -7,8 +7,12 @@ export default function Preloader() {
   const [phase, setPhase] = useState<"logo" | "opening" | "done">("logo");
 
   useEffect(() => {
-    const openTimer = setTimeout(() => setPhase("opening"), 1800);
-    const doneTimer = setTimeout(() => setPhase("done"), 1800 + 2000);
+    // Matches the live site's default (non-redirect) timing: the shutter
+    // starts opening almost immediately, not after a long dramatic pause —
+    // the multi-second version only fires there after a post-submission
+    // redirect (?showData=true), not on a normal first visit.
+    const openTimer = setTimeout(() => setPhase("opening"), 100);
+    const doneTimer = setTimeout(() => setPhase("done"), 100 + 2000);
     return () => {
       clearTimeout(openTimer);
       clearTimeout(doneTimer);

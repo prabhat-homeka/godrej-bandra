@@ -33,7 +33,7 @@ const PLANS: Plan[] = [
   },
   {
     type: "Penthouse",
-    carpetArea: "14,000 sq.ft.",
+    carpetArea: "8,000 sq.ft.",
     price: "On Request",
     blurb: "Limited sky residences. Enquire for details.",
     cta: "The Pinnacle of Bandra Living",
@@ -94,7 +94,7 @@ export default function PlansPricing() {
                     onClick={() => openEnquiry("Check Price", `Plans - ${plan.type}`)}
                     className="gold-shine mt-4 w-full rounded-xl bg-gold py-2.5 text-sm font-semibold text-ink transition hover:bg-gold-dark"
                   >
-                    Starting ₹ Get Pricing
+                    Get Complete Costing Details
                   </button>
                 </div>
               </div>

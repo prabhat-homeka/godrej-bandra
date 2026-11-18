@@ -5,7 +5,7 @@ const HIGHLIGHTS = [
   { title: "Iconic", desc: "Premium Hi-Rise Development" },
   { title: "Vistas", desc: "Panoramic Arabian Sea Views" },
   { title: "Privacy", desc: "Designed for Peace, Space & Exclusivity" },
-  { title: "Grandeur", desc: "Expansive 3 & 4 BHK Residences" },
+  { title: "Grandeur", desc: "Expansive 4 & 5 BHK Residences" },
   { title: "Opulence", desc: "Timeless Luxury in Every Detail" },
   { title: "Indulgence", desc: "40+ Curated Lifestyle Experiences" },
 ];

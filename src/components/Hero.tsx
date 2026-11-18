@@ -27,7 +27,7 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 py-16 text-center text-cream-light sm:px-6">
         <p className="font-serif text-3xl text-gold sm:text-4xl" style={{ textShadow: "0 0 10px #000" }}>
-          Godrej Bandra
+          Godrej Bandra Bay
         </p>
 
         <h1 className="mx-auto mt-4 max-w-2xl font-serif text-3xl leading-tight text-white sm:text-4xl lg:text-5xl">
@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 text-lg text-gold sm:text-xl">
-          EOI Offers For Early Birds | Ultra-Luxury 3 &amp; 4 BHK
+          EOI Offers For Early Birds | Ultra Luxury 4 &amp; 5 BHK
         </p>
 
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
@@ -52,7 +52,7 @@ export default function Hero() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="https://api.whatsapp.com/send?phone=+917000106787&text=Hello%2C%20I%20am%20Interested%20in%20Godrej%27s%20New%20Launch%20Project%20at%20Bandra.%20Kindly%20Send%20the%20Project%20Details."
+            href="https://api.whatsapp.com/send?phone=+917000106787&text=Hello%2C%20I%20am%20Interested%20in%20Godrej%20Bandra%20Bay%2C%20Bandra%20West.%20Kindly%20Send%20the%20Project%20Details."
             target="_blank"
             rel="noopener noreferrer"
             className="gold-shine flex items-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-semibold text-ink transition hover:bg-gold-dark"
@@ -69,7 +69,7 @@ export default function Hero() {
 
         <p className="mt-8 flex items-center justify-center gap-2 text-sm text-cream-light/80">
           <Image src="/img/location-icon.png" alt="" width={14} height={14} style={{ width: 14, height: "auto" }} />
-          Bandra, Mumbai
+          Bandra West, Mumbai
         </p>
       </div>
 

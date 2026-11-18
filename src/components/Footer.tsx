@@ -18,13 +18,13 @@ export default function Footer() {
           <div>
             <Image
               src="/img/brandlogo.png"
-              alt="Godrej Bandra"
+              alt="Godrej Properties | Bandra Bay"
               width={140}
               height={42}
               className="h-9 w-auto object-contain brightness-0 invert"
             />
             <p className="mt-4 text-sm">
-              Godrej Bandra – Bandra West, Mumbai
+              Godrej Bandra Bay – Bandra West, Mumbai
             </p>
             <p className="mt-2 text-sm">
               Call us on{" "}

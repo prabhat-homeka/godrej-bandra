@@ -24,10 +24,10 @@ export default function Navbar() {
         <a href="#home" className="flex shrink-0 items-center gap-2">
           <Image
             src="/img/brandlogo.png"
-            alt="Godrej Bandra"
-            width={200}
-            height={48}
-            className="h-8 w-auto object-contain xl:h-9"
+            alt="Godrej Properties | Bandra Bay"
+            width={900}
+            height={204}
+            className="h-9 w-auto object-contain xl:h-10"
             priority
           />
         </a>

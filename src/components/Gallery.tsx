@@ -18,7 +18,7 @@ export default function Gallery() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           gold="Gallery"
-          subtitle="Explore the beauty and elegance of Godrej Bandra"
+          subtitle="Explore the beauty and elegance of Godrej Bandra Bay"
         />
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
@@ -32,7 +32,7 @@ export default function Gallery() {
             >
               <Image
                 src={src}
-                alt={`Godrej Bandra gallery image ${i + 1}`}
+                alt={`Godrej Bandra Bay gallery image ${i + 1}`}
                 fill
                 sizes={
                   i === 0

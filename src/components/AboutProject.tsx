@@ -7,7 +7,7 @@ import SectionHeading from "./SectionHeading";
 
 const STATS = [
   { value: "4.25", label: "Acres" },
-  { value: "3 & 4", label: "Bed Residences" },
+  { value: "4 & 5", label: "BHK Residences" },
   { value: "40+", label: "Exclusive Amenities" },
 ];
 
@@ -27,7 +27,7 @@ export default function AboutProject() {
           <Reveal className="relative h-96 w-full overflow-hidden lg:h-[520px]">
             <Image
               src="/img/aboutproject-1.webp"
-              alt="Godrej Bandra West project"
+              alt="Godrej Bandra Bay project"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -40,9 +40,16 @@ export default function AboutProject() {
             </p>
 
             <p className="mt-6 leading-relaxed text-taupe">
-              Godrej Bandra West is an upcoming luxury residential project by Godrej
-              Properties, offering premium 3 &amp; 4 BHK residences across 4.25 acres in
-              the heart of Bandra West, Mumbai, designed for modern urban living.
+              Godrej Bandra Bay is an iconic luxury residential development in Bandra
+              West, Mumbai. Featuring five landmark towers inspired by Aston designer
+              distinctive landscape design language, the project offers spacious, sea
+              facing 4 &amp; 5 BHK luxury residences with breathtaking views of the
+              Arabian Sea and South Mumbai skyline. Designed for refined urban living,
+              these premium homes feature expansive 12 ft decks, private elevators to
+              each apartments and an exclusive range of world-class lifestyle amenities.
+              With excellent connectivity to BKC, Worli and key destinations across
+              Mumbai, Bandra Bay presents an exceptional address for those seeking
+              luxury apartments in Bandra.
             </p>
 
             <div className="mt-10 grid grid-cols-3 gap-6 border-y border-ink/10 py-6">
@@ -59,9 +66,9 @@ export default function AboutProject() {
             <div className="mt-6 flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-wide text-taupe">
-                  Starting price (per sq.ft)
+                  Starting price
                 </p>
-                <p className="font-serif text-2xl text-ink">₹ On Request</p>
+                <p className="font-serif text-2xl text-ink">₹ 18 Cr* Onwards</p>
               </div>
               <button
                 onClick={() => openEnquiry("Download Brochure", "About Project")}

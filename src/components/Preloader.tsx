@@ -39,7 +39,7 @@ export default function Preloader() {
       >
         <Image
           src="/img/brandlogo.png"
-          alt="Godrej Bandra"
+          alt="Godrej Properties | Bandra Bay"
           width={260}
           height={78}
           className="h-auto w-48 sm:w-64"

@@ -24,9 +24,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Godrej Bandra West | Luxury 3 & 4 BHK Apartments in Mumbai",
+  title: "Godrej Bandra Bay | Sea-Facing Luxury 4 & 5 BHK Apartments in Bandra West, Mumbai",
   description:
-    "Explore Godrej Bandra West, offering premium 3 & 4 BHK luxury residences on 4.25 acres in Bandra West, Mumbai. Enquire for pricing, floor plans & offers.",
+    "Godrej Bandra Bay offers sea-facing 4 & 5 BHK luxury residences and penthouses in Bandra West, Mumbai, starting ₹18 Cr*. Enquire for pricing, floor plans & offers.",
 };
 
 export default function RootLayout({

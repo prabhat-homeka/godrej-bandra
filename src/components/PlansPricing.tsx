@@ -8,6 +8,7 @@ import SectionHeading from "./SectionHeading";
 type Plan = {
   type: string;
   carpetArea: string;
+  price: string;
   blurb: string;
   cta: string;
   image: string;
@@ -15,18 +16,28 @@ type Plan = {
 
 const PLANS: Plan[] = [
   {
-    type: "3 BHK",
-    carpetArea: "2,307 sq.ft.",
+    type: "4 BHK",
+    carpetArea: "2,400 – 3,500 sq.ft.",
+    price: "₹ 18 Cr* Onwards",
     blurb: "Enquire for exclusive launch offers.",
     cta: "Your Gateway to Bandra Luxury",
     image: "/img/floorplans/floorplan2.webp",
   },
   {
-    type: "4 BHK",
-    carpetArea: "2,200 – 2,600 sq.ft.",
+    type: "5 BHK",
+    carpetArea: "4,100 sq.ft.",
+    price: "₹ 41 Cr* Onwards",
     blurb: "Get the complete cost sheet instantly.",
     cta: "Explore Exclusive Pricing",
     image: "/img/floorplans/floorplan3.webp",
+  },
+  {
+    type: "Penthouse",
+    carpetArea: "8,000 sq.ft.",
+    price: "On Request",
+    blurb: "Limited sky residences. Enquire for details.",
+    cta: "The Pinnacle of Bandra Living",
+    image: "/img/gallery/gal05.webp",
   },
 ];
 
@@ -42,7 +53,7 @@ export default function PlansPricing() {
           subtitle="Choose from our designed floor plans."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {PLANS.map((plan, i) => (
             <Reveal key={plan.type} style={{ transitionDelay: `${i * 100}ms` }}>
               <div className="hover-lift overflow-hidden rounded-xl bg-white shadow-[0_0_14px_-8px_var(--color-gold)]">
@@ -54,7 +65,7 @@ export default function PlansPricing() {
                     src={plan.image}
                     alt={`${plan.type} floor plan`}
                     fill
-                    sizes="(min-width: 768px) 50vw, 100vw"
+                    sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                     className="object-contain p-6"
                   />
                   <span className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-black/60 px-4 py-2 text-xs text-cream-light opacity-0 transition group-hover:opacity-100">
@@ -73,13 +84,17 @@ export default function PlansPricing() {
                     <span>Carpet Area</span>
                     <span className="text-ink">{plan.carpetArea}</span>
                   </div>
+                  <div className="flex items-center justify-between border-b border-[#f5edd4] py-2.5 text-sm text-taupe">
+                    <span>Price</span>
+                    <span className="font-semibold text-ink">{plan.price}</span>
+                  </div>
                   <p className="mt-2 text-center text-xs italic text-taupe">{plan.blurb}</p>
 
                   <button
                     onClick={() => openEnquiry("Check Price", `Plans - ${plan.type}`)}
                     className="gold-shine mt-4 w-full rounded-xl bg-gold py-2.5 text-sm font-semibold text-ink transition hover:bg-gold-dark"
                   >
-                    Starting ₹ Get Pricing
+                    Get Complete Costing Details
                   </button>
                 </div>
               </div>

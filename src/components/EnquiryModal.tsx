@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import { useEnquiry, type FormType } from "./EnquiryContext";
 import { getTrackingParams } from "@/lib/tracking";
 
-const CONFIG_OPTIONS = ["3 BHK", "4 BHK", "3 BHK Royal", "Not sure yet"];
+const CONFIG_OPTIONS = ["4 BHK", "5 BHK", "Penthouse", "Not sure yet"];
 
 const FORM_CONFIG: Record<
   FormType,
@@ -130,7 +130,7 @@ export default function EnquiryModal() {
         </button>
 
         <p className="section-eyebrow text-xs font-semibold uppercase text-gold">
-          Godrej Bandra
+          Godrej Bandra Bay
         </p>
         <h3 className="mt-1 font-serif text-2xl text-ink">{config.title}</h3>
 

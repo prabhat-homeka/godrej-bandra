@@ -292,7 +292,7 @@ export default function EnquiryModal() {
             </button>
 
             <a
-              href="https://wa.me/917000106787"
+              href="https://wa.me/919702978506"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center text-sm font-medium text-gold-dark underline underline-offset-4"

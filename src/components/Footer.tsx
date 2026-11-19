@@ -28,8 +28,8 @@ export default function Footer() {
             </p>
             <p className="mt-2 text-sm">
               Call us on{" "}
-              <a href="tel:+917000106787" className="text-gold hover:underline">
-                +91 7000106787
+              <a href="tel:+919702978506" className="text-gold hover:underline">
+                +91 9702978506
               </a>
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
               Contact
             </p>
             <a
-              href="https://wa.me/917000106787"
+              href="https://wa.me/919702978506"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-flex items-center gap-2 text-sm hover:text-gold"

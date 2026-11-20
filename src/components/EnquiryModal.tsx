@@ -1,8 +1,9 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 import { useEnquiry, type FormType } from "./EnquiryContext";
-import { getTrackingParams } from "@/lib/tracking";
+import { getTrackingParams, markLeadSubmitted } from "@/lib/tracking";
 
 const CONFIG_OPTIONS = ["4 BHK", "5 BHK", "Penthouse", "Not sure yet"];
 
@@ -76,6 +77,7 @@ const USPS = [
 
 export default function EnquiryModal() {
   const { isOpen, closeEnquiry, formType, context } = useEnquiry();
+  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const config = FORM_CONFIG[formType];
 
@@ -102,11 +104,14 @@ export default function EnquiryModal() {
       const res = await fetch("/api/enquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType, source: context, ...getTrackingParams() }),
+        body: JSON.stringify({ ...data, formType, formSource: context, ...getTrackingParams() }),
       });
       if (!res.ok) throw new Error("failed");
       setStatus("success");
       form.reset();
+      markLeadSubmitted();
+      closeEnquiry();
+      router.push("/thank-you");
     } catch {
       setStatus("error");
     }

@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 
 export type FormType =
@@ -27,6 +28,7 @@ export function EnquiryProvider({ children }: { children: React.ReactNode }) {
   const [formType, setFormType] = useState<FormType>("Enquire Now");
   const [context, setContext] = useState("General");
   const hasOpenedRef = useRef(false);
+  const pathname = usePathname();
 
   const openEnquiry = useCallback((type: FormType = "Enquire Now", ctx = "General") => {
     hasOpenedRef.current = true;
@@ -38,13 +40,15 @@ export function EnquiryProvider({ children }: { children: React.ReactNode }) {
   const closeEnquiry = useCallback(() => setIsOpen(false), []);
 
   useEffect(() => {
+    // No auto-popup on the thank-you page — the visitor has just enquired.
+    if (pathname === "/thank-you") return;
     const timer = setTimeout(() => {
       if (!hasOpenedRef.current) {
         openEnquiry("Enquire Now", "Auto-popup (30s)");
       }
     }, AUTO_POPUP_DELAY_MS);
     return () => clearTimeout(timer);
-  }, [openEnquiry]);
+  }, [openEnquiry, pathname]);
 
   const value = useMemo(
     () => ({ isOpen, formType, context, openEnquiry, closeEnquiry }),

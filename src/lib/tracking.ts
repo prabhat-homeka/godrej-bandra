@@ -70,3 +70,25 @@ export function getTrackingParams(): TrackingParams {
   }
   return { url: window.location.href };
 }
+
+const LEAD_FLAG_KEY = "gb_lead_submitted";
+
+// Set right before redirecting to /thank-you after a successful submission, so
+// the thank-you page only fires the conversion for a real lead.
+export function markLeadSubmitted(): void {
+  try {
+    sessionStorage.setItem(LEAD_FLAG_KEY, "1");
+  } catch {
+    // storage unavailable — conversion just won't fire
+  }
+}
+
+export function consumeLeadSubmittedFlag(): boolean {
+  try {
+    if (sessionStorage.getItem(LEAD_FLAG_KEY) !== "1") return false;
+    sessionStorage.removeItem(LEAD_FLAG_KEY);
+    return true;
+  } catch {
+    return false;
+  }
+}

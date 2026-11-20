@@ -6,6 +6,7 @@ import EnquiryModal from "@/components/EnquiryModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import TrackingCapture from "@/components/TrackingCapture";
 import Preloader from "@/components/Preloader";
+import GoogleTag from "@/components/GoogleTag";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -47,6 +48,7 @@ export default function RootLayout({
           <EnquiryModal />
           <WhatsAppButton />
         </EnquiryProvider>
+        <GoogleTag />
       </body>
     </html>
   );
